@@ -352,11 +352,16 @@ nav li {
   width: 100%;
   background: #f4f4f4;
 }
-
+.services-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .services-list ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .services-list li {
@@ -387,8 +392,8 @@ nav li {
   width: calc(90% - 80px);
   margin-left: 40px;
 }
-.item-hide{
-    display: none;
+.item-hide {
+  display: none;
 }
 
 /* end services */
@@ -398,7 +403,6 @@ nav li {
 /* --------------------------------------*/
 .comunidad {
   overflow: hidden;
-  height: 50vh;
 }
 
 .parallax-image-window {
@@ -450,15 +454,15 @@ nav li {
   min-height: 500px;
 }
 .image-2 {
-    position: relative;
-    background: url("/assets/img/backtop2.jpg") no-repeat fixed;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 500px;
-  }
+  position: relative;
+  background: url("/assets/img/backtop2.jpg") no-repeat fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 500px;
+}
 
 /* end comunidad */
 
@@ -552,19 +556,19 @@ nav li {
   align-items: center;
   background-repeat: no-repeat;
 }
-.img-3{
+.img-3 {
   background-image: url("assets/img/consejo-abogados.png");
 }
-.img-4{
+.img-4 {
   background-image: url("assets/img/consejo.png");
 }
-.img-5{
+.img-5 {
   background-image: url("assets/img/open-english.png");
 }
-.img-6{
+.img-6 {
   background-image: url("assets/img/sport-club.png");
 }
-.img-7{
+.img-7 {
   background-image: url("assets/img/space-guru.png");
 }
 /* end Partners */
@@ -760,6 +764,18 @@ footer {
   -o-animation: over-reservar-planes 0.35s ease-out forwards;
   animation: over-reservar-planes 0.35s ease-out forwards;
 }
+.center-button {
+  cursor: pointer;
+  width: fit-content;
+  margin: 40px 40px;
+  padding: 20px 30px;
+  color: rgb(34, 34, 34);
+  background: rgb(0, 253, 1);
+}
+
+.center-button:hover {
+  animation: 0.35s ease-out 0s 1 normal forwards running over-reservar-planes;
+}
 
 @media (max-width: 1024px) {
   #sidebar {
@@ -789,6 +805,7 @@ footer {
   }
   .form-input-item {
     width: 65%;
+    text-align: -webkit-center;
   }
 
   .planes-list ul {
@@ -915,11 +932,23 @@ footer {
     padding: 40px 40px;
   }
 }
-
-@media (max-width: 414px) {
-  .tour-360 button {
+@media screen and (max-width: 426px) {
+  .services-list ul{
+    display:block;
+  }
+  .services-list li{
+    margin: auto;
+  }
+  .partners-list ul{
+    display:block;
+  }
+  .partners-list li{
+    margin: auto;
+  }
+}
+@media (max-width: 426px) {
+  .tour-360 a {
     padding: 20px 30px;
-    width: 100%;
   }
 
   .text-slider h1 {
@@ -1030,7 +1059,25 @@ footer {
 .tour-360 {
   display: flex;
 }
-.center-button{
-  justify-content: center;
-  margin-top: 40px;
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
 }
