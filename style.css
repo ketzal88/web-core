@@ -933,16 +933,16 @@ footer {
   }
 }
 @media screen and (max-width: 426px) {
-  .services-list ul{
-    display:block;
+  .services-list ul {
+    display: block;
   }
-  .services-list li{
+  .services-list li {
     margin: auto;
   }
-  .partners-list ul{
-    display:block;
+  .partners-list ul {
+    display: block;
   }
-  .partners-list li{
+  .partners-list li {
     margin: auto;
   }
 }
@@ -1060,24 +1060,56 @@ footer {
   display: flex;
 }
 
-.gallery {
-  background: #EEE;
+/* Slider Testimonio */
+.center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  grid-gap: 1em;
+  overflow: hidden;
+  width: 63em;
+}
+.wrapper > .inner {
+  display: flex;
+  grid-gap: 1em;
+  transition: all 1s ease-in-out;
 }
 
-.gallery-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
+.card > .content {
+  text-align: left;
+  width: 20em;
 }
 
-/* cell number */
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+.card > .content > h1 {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.card > .content > h3 {
+  color: #ccc;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.map {
+  margin-top: 1em;
+}
+.map > button {
+  all: unset;
+  background: gray;
+  cursor: pointer;
+  margin: 0 0.125em;
+  position: relative;
+  user-select: none;
+  border-radius: 100%;
+  height: 1em;
+  width: 1em;
+}
+.map > button.active:focus {
+  background: #00fd01;
+
 }
