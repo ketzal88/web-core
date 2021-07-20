@@ -932,7 +932,15 @@ footer {
     padding: 40px 40px;
   }
 }
-@media screen and (max-width: 426px) {
+@media (max-width: 626px) {
+  .work-space-list ul {
+    display: block;
+  }
+  .work-space-list li {
+    margin: auto;
+  }
+}
+@media (max-width: 566px) {
   .services-list ul {
     display: block;
   }
@@ -1080,17 +1088,17 @@ footer {
   transition: all 1s ease-in-out;
 }
 
-.card > .content {
+.card > .content-testmonio {
   text-align: left;
   width: 20em;
 }
 
-.card > .content > h1 {
+.card > .content-testmonio > h1 {
   color: #fff;
   font-size: 1.25rem;
   line-height: 1;
 }
-.card > .content > h3 {
+.card > .content-testmonio > h3 {
   color: #ccc;
   font-size: 0.9rem;
   font-weight: 300;
@@ -1109,7 +1117,36 @@ footer {
   height: 1em;
   width: 1em;
 }
-.map > button.active:focus {
-  background: #00fd01;
+button.fourth {
+  display: none;
+}
+button.fifth  {
+  display: none;
+}
+.active {
+  background: #00fd01 !important;
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 48em;
+  }
 
+  .card > .content-testmonio {
+    width: 15em;
+  }
+}
+@media (max-width: 786px) {
+  button.fourth {
+    display: inline-block;
+  }
+  button.fifth {
+    display: inline-block;
+  }
+  .wrapper {
+    width: 26em;
+  }
+
+  .card > .content-testmonio {
+    width: 25em;
+  }
 }

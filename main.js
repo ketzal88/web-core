@@ -14,6 +14,7 @@ const slides = document.querySelector(".inner");
 
 buttonsWrapper.addEventListener("click", e => {
   if (e.target.nodeName === "BUTTON") {
+    console.log('click')
     Array.from(buttonsWrapper.children).forEach(item =>
       item.classList.remove("active")
     );
@@ -21,10 +22,18 @@ buttonsWrapper.addEventListener("click", e => {
       slides.style.transform = "translateX(-0%)";
       e.target.classList.add("active");
     } else if (e.target.classList.contains("second")) {
-      slides.style.transform = "translateX(-20em)";
+      slides.style.transform = "translateX(-20%)";
       e.target.classList.add("active");
     } else if (e.target.classList.contains('third')){
-      slides.style.transform = 'translatex(-40em)';
+      slides.style.transform = 'translatex(-40%)';
+      e.target.classList.add('active');
+    }
+    else if (e.target.classList.contains('fourth')){
+      slides.style.transform = 'translatex(-60%)';
+      e.target.classList.add('active');
+    }
+    else if (e.target.classList.contains('fifth')){
+      slides.style.transform = 'translatex(-80%)';
       e.target.classList.add('active');
     }
   }
