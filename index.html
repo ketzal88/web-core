@@ -80,10 +80,9 @@
         <nav id="nav-classic" class="menu-classic">
           <a href="#home"><div id="logo-coreworks" class="logo-dark"></div></a>
           <button
-            id="menu-hamburger"
+            id="burgerMenu"
             class="hamburger ham-dark"
-            on="tap:sidebar.open"
-          ></button>
+         ></button>
           <ul>
             <li><a href="#home">home</a></li>
             <li>
@@ -97,6 +96,19 @@
         </nav>
       </div>
     </header>
+    <div id="sidebar" class="sidebar"  role="menu">
+     <button class="close-btn">
+          <img decoding="async" src="assets/img/close-24px.svg" class='burgerMenu' />
+      </button>         
+      <ul>
+          <li class='burgerMenu'><a>home</a></li>
+          <li class='burgerMenu'><a>espacios de trabajo</a></li>
+          <li class='burgerMenu'><a>servicios</a></li>                    
+          <li class='burgerMenu'><a>comunidad</a></li>
+          <li class='burgerMenu'><a>planes</a></li>            
+          <li class='burgerMenu'><a>contacto</a></li>            
+      </ul>
+    </div>
     <section class="corework-slider" id="home">
       <div class="text-slider">
         <div class="content">
@@ -538,6 +550,7 @@
           </div>
         </div>
       </div>
+   
     <section class="contacto space-section" id="contact">
       <div class="content">
         <div class="title-section color-text-1">

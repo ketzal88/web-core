@@ -819,7 +819,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #sidebar,
   .hamburger {
     display: block;
   }
@@ -1120,7 +1119,7 @@ footer {
 button.fourth {
   display: none;
 }
-button.fifth  {
+button.fifth {
   display: none;
 }
 .active {
@@ -1148,5 +1147,40 @@ button.fifth  {
 
   .card > .content-testmonio {
     width: 25em;
+    text-align: center;
   }
+}
+@media (max-width: 425px) {
+  .wrapper {
+    width: 20em;
+  }
+
+  .card > .content-testmonio {
+    width: 19em;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  --story-page-vh: 1vh;
+  position: fixed !important;
+  top: 0;
+  max-height: 100vh !important;
+  height: 100vh;
+  max-width: 80vw;
+  background-color: #efefef;
+  min-width: 45px !important;
+  outline: none;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  z-index: 2147483647;
+  -webkit-overflow-scrolling: touch;
+  will-change: transform;
+  display: inline-block !important;
+  transition: transform 0.4s linear;
+  transform: translateX(-100%);
+}
+.show {
+  transition: transform 0.4s linear;
+  transform: translateX(0);
 }
