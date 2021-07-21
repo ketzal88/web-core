@@ -2,20 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-     <!-- Primary Meta Tags -->
-     <meta name="description" content="Coreworks es el más grande Coworking de Tribunales. Conocelo y elegí tu nuevo espacio de trabajo.">
-     <meta name="Coworking Tribunales" content="Oficinas Coworking a estrenar, salas de reunión, espacio verde en el centro de la ciudad. Descuento del 20% ">
-     <meta name="Crecé en Coreworks, el nuevo coworking de Tribunales" content=" Oficinas Coworking a estrenar, salas de reunión, espacio verde en el centro de la ciudad. Descuento del 20% ">
-     <meta name="coworking" content="coworking, coworking tribunales, tribunales, coworking abogados, precio coworking, oficinas Coworking alquiler">
-     <!-- Open Graph / Facebook -->
-     <meta property="og:type" content="website">
-     <meta property="og:url" content="https://www.coreworks.com.ar">
-     <meta property="og:title" content=" Oficinas Coworking a estrenar, salas de reunión, espacio verde en el centro de la ciudad. Descuento del 20% ">
-     <meta property="og:description" content="Oficinas Coworking a estrenar, salas de reunión, espacio verde en el centro de la ciudad. Descuento del 20% ">
-     <meta property="og:image" content="https://www.coreworks.com.ar/assets/img/logo-corework-dark.svg">
-     <!-- -->
-     <title>Coreworks - Coworking</title>
-     <link rel="canonical" href="index.html">
+    <!-- Primary Meta Tags -->
+    <meta
+      name="description"
+      content="Coreworks es el más grande Coworking de Tribunales. Conocelo y elegí tu nuevo espacio de trabajo."
+    />
+    <meta
+      name="Coworking Tribunales"
+      content="Oficinas Coworking a estrenar, salas de reunión, espacio verde en el centro de la ciudad. Descuento del 20% "
+    />
+    <meta
+      name="Crecé en Coreworks, el nuevo coworking de Tribunales"
+      content=" Oficinas Coworking a estrenar, salas de reunión, espacio verde en el centro de la ciudad. Descuento del 20% "
+    />
+    <meta
+      name="coworking"
+      content="coworking, coworking tribunales, tribunales, coworking abogados, precio coworking, oficinas Coworking alquiler"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.coreworks.com.ar" />
+    <meta
+      property="og:title"
+      content=" Oficinas Coworking a estrenar, salas de reunión, espacio verde en el centro de la ciudad. Descuento del 20% "
+    />
+    <meta
+      property="og:description"
+      content="Oficinas Coworking a estrenar, salas de reunión, espacio verde en el centro de la ciudad. Descuento del 20% "
+    />
+    <meta
+      property="og:image"
+      content="https://www.coreworks.com.ar/assets/img/logo-corework-dark.svg"
+    />
+    <!-- -->
+    <title>Coreworks - Coworking</title>
+    <link rel="canonical" href="index.html" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
@@ -47,8 +68,26 @@
       gtag("js", new Date());
 
       gtag("config", "G-7EYMLZSYR7");
+      gtag("config", "AW-665514062");
     </script>
     <!-- End of Global site tag -->
+
+    <!-- Event snippet for Contacto Whatsapp Worker conversion page
+      In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-665514062/PNY0CNK8sNgBEM7gq70C",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -93,10 +132,7 @@
       <div class="content-header">
         <nav id="nav-classic" class="menu-classic">
           <a href="#home"><div id="logo-coreworks" class="logo-dark"></div></a>
-          <button
-            id="burgerMenu"
-            class="hamburger ham-dark"
-         ></button>
+          <button id="burgerMenu" class="hamburger ham-dark"></button>
           <ul>
             <li><a href="#home">home</a></li>
             <li>
@@ -110,17 +146,17 @@
         </nav>
       </div>
     </header>
-    <div id="sidebar" class="sidebar"  role="menu">
+    <div id="sidebar" class="sidebar" role="menu">
       <button class="close-btn" id="btn-close">
-          <img decoding="async" src="assets/img/close-24px.svg" />
-      </button>         
-      <ul id='list-close'>
-          <li><a  href="#home">home</a></li>
-          <li><a  href="#workspace">espacios de trabajo</a></li>
-          <li><a href="#services">servicios</a></li>                    
-          <li><a href="#community">comunidad</a></li>
-          <li><a href="#planes">planes</a></li>            
-          <li><a href="#contact">contacto</a></li>            
+        <img decoding="async" src="assets/img/close-24px.svg" />
+      </button>
+      <ul id="list-close">
+        <li><a href="#home">home</a></li>
+        <li><a href="#workspace">espacios de trabajo</a></li>
+        <li><a href="#services">servicios</a></li>
+        <li><a href="#community">comunidad</a></li>
+        <li><a href="#planes">planes</a></li>
+        <li><a href="#contact">contacto</a></li>
       </ul>
     </div>
     <section class="corework-slider" id="home">
@@ -617,6 +653,7 @@
       href="https://wa.me/5491137987886?text=Hola!%20%20Quiero%20Reservar%2C%20mi%20puesto"
       class="whatsapp"
       target="_blank"
+      onclick="gtag_report_conversion()"
     >
       <div class="whatsapp-icon"></div
     ></a>
