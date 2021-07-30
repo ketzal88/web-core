@@ -1,21 +1,25 @@
-@import url("./assets/fonts/Poppins-Medium.woff");
-@import url("./assets/fonts/Poppins-Medium.woff2");
-@import url("./assets/fonts/Poppins-Regular.woff");
-@import url("./assets/fonts/Poppins-Regular.woff2");
-@import url("./assets/fonts/Poppins-SemiBold.woff");
-@import url("./assets/fonts/Poppins-SemiBold.woff2");
 @font-face {
-  font-family: "Poppins";
-  src: url("./assets/fonts/Poppins-SemiBold.woff");
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/Poppins-Regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("./assets/fonts/Poppins-Medium.woff");
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/Poppins-Medium.woff2') format('woff2');
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("./assets/fonts/oppins-Regular.woff");
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./assets/fonts/Poppins-SemiBold.woff2') format('woff2');
 }
+
 body {
   margin: 0;
   font-size: 15px;
@@ -303,7 +307,7 @@ nav li {
 
 .cover-image {
   background-repeat: no-repeat;
-  background-image: url(assets/img/backtop.jpg);
+  background-image: url('assets/img/backtop.jpg');
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -445,7 +449,7 @@ nav li {
 }
 .image-1 {
   position: relative;
-  background: url("/assets/img/tour-virtual.jpg") no-repeat fixed;
+  background: url("assets/img/tour-virtual.jpg") no-repeat fixed;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -455,7 +459,7 @@ nav li {
 }
 .image-2 {
   position: relative;
-  background: url("/assets/img/backtop2.jpg") no-repeat fixed;
+  background: url("assets/img/backtop2.jpg") no-repeat fixed;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -494,7 +498,7 @@ nav li {
   color: #222222;
   display: inline-block;
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
   border-bottom: 1px solid #e7e7e7;
   padding-bottom: 12px;
   padding-top: 12px;
